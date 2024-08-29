@@ -67,3 +67,11 @@ The response includes:
 - `weather_descriptions`: Weather description.
 - `wind_speed`: Wind speed in km/h.
 - `humidity`: Humidity percentage.
+
+## Acknowledgments
+
+- [Weatherstack API](https://weatherstack.com/) for providing weather data.
+- [Express](https://expressjs.com/) for the web framework.
+- [dotenv](https://www.npmjs.com/package/dotenv) for managing environment variables.
+
+---
