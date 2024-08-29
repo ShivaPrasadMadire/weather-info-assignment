@@ -52,10 +52,10 @@ A Node.js service that fetches and displays current weather information based on
 
 ### Example
 
-For London:
+For Hyderabad:
 
 ```
-http://localhost:3000/weather?city=London
+http://localhost:3000/weather?city=Hyderabad
 ```
 
 ### Response

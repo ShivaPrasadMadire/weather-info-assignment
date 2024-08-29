@@ -8,15 +8,26 @@ const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 
 app.use(express.json());
 
+// app.get('/', (req, res) => {
+//     res.send('Welcome to Weather Information Service');
+// });
+
 app.get('/', (req, res) => {
-    res.send('Welcome to Weather Information Service');
+    res.send(
+        '<h1>Welcome to the Weather Information Service!</h1>' +
+        '<p>To get the weather information for a specific city<p>' +
+        '<p>please send a GET request to <code>/weather</code> with the city name as a query parameter.<p>' +
+        '<p>For example: <code>/weather?city=Hyderabad  <span style="color:blue">[  http://localhost:3000/weather?city=Hyderabad  ]<span></code><p>'
+    );
 });
+
+
 
 app.get('/weather', async (req, res) => {
     const city = req.query.city;
 
     if (!city) {
-        return res.status(400).send({ error: 'Please a city Name' });
+        return res.status(400).send({ error: 'Please Enter a city Name' });
     }
 
     try {
